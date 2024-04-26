@@ -1,0 +1,28 @@
+{
+    "name": "Quick Fill Stamp",
+    "short_name": "quickfill",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "Quickly save and get data from local storage by clicking on elements",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "logo1.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.shcilestamp.com/eStampIndia/submission/SubmissionServlet"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ]
+}
